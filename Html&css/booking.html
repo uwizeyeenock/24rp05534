@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Ticket - Ticket Booking Rwanda</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript function to show a confirmation message when the form is submitted
+        function showConfirmation(event) {
+            event.preventDefault(); // Prevents the form from actually submitting
+
+            // Display the confirmation message
+            alert("Your ticket has been booked successfully!");
+
+            // Optional: You can reset the form here if needed
+            document.querySelector('form').reset();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>BOOK A TICKET</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="agencies.html">Car Agencies</a></li>
+                <li><a href="booking.html">Book a Ticket</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="booking-form">
+            <h2>Plan Your Trip</h2>
+            <p>Fill in the details below to book your car ticket.</p>
+            <form action="#" method="post" onsubmit="showConfirmation(event)">
+                <div class="form-group">
+                    <label for="agency">Choose an Agency:</label>
+                    <select id="agency" name="agency">
+                        <option value="kigali-express">Kigali Express</option>
+                        <option value="safari-cars">Safari Cars</option>
+                        <option value="volcano-transports">Volcano Transports</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Travel Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" name="destination" placeholder="Enter your destination" required>
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Number of Passengers:</label>
+                    <input type="number" id="passengers" name="passengers" min="1" max="10" required>
+                </div>
+                <button type="submit" class="btn-submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>online ticket bus</p>
+    </footer>
+</body>
+</html>
